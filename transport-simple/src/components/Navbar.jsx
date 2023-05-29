@@ -1,11 +1,10 @@
 import { Box, Flex, Image, Text, Button, IconButton, useDisclosure } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import styles from "../styles/navbar.module.css";
-
 const Navbar = () => {
     const { isOpen, onToggle } = useDisclosure();
     return (
-        <Box
+        <Box position={"sticky"} top={"0"} zIndex={"1"}
             background="#fff" h="80px" w="100%" px={4} boxShadow={"0 2px 5px 0 #E2E4F6"} boxSizing='border-box'>
             <Flex align="center" justify="space-between" h="100%" w="100%" >
                 <Flex align="center" h={"100%"} w="20%">
@@ -21,15 +20,15 @@ const Navbar = () => {
                         aria-label="Toggle Navigation"
                     />
                 </Box>
-                <Flex align="center" w="50%" justifyContent={"space-evenly"} fontSize={"20px"} cursor={"pointer"} display={{ base: isOpen ? 'flex' : 'none', md: 'flex' }}>
-                    <NavItem>Home</NavItem>
-                    <NavItem>Feature</NavItem>
-                    <NavItem>Industry</NavItem>
-                    <NavItem>About</NavItem>
-                    <NavItem>Contact Us</NavItem>
+                <Flex align="center" w="50%" justifyContent={"space-evenly"} fontSize={"20px"}  display={{ base: isOpen ? 'flex' : 'none', md: 'flex' }}>
+                    <Text className={styles.set_nav_items}>Home</Text>
+                    <Text className={styles.set_nav_items}>Feature</Text>
+                    <Text className={styles.set_nav_items}>Industry</Text>
+                    <Text className={styles.set_nav_items}>About</Text>
+                    <Text className={styles.set_nav_items}>Contact Us</Text>
                 </Flex>
 
-                <Flex align="center">
+                <Flex align="center" >
                     <Button colorScheme="blue">Get Demo</Button>
                 </Flex>
             </Flex>
