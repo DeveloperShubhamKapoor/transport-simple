@@ -3,7 +3,7 @@ import { SectionOne } from "../components/Homepage/SectionOne"
 import { SectionTwo } from "../components/Homepage/SectionTwo"
 import { SectionThree } from "../components/Homepage/SectionThree"
 import { SectionFour } from "../components/Homepage/SectionFour"
-import { SectionFive } from "../components/Homepage/SectionFive"
+import { Footer } from "../components/Footer"
 
 
 export const Home = () => {
@@ -16,7 +16,7 @@ export const Home = () => {
             <SectionTwo/>
             <SectionThree/>
             <SectionFour/>
-            <SectionFive/>
+            <Footer/>
         </>
     )
 }
